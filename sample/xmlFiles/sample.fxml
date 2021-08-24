@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <!--/** -->
@@ -46,4 +47,15 @@
       <URL value="@styles/controlles.css" />
       <URL value="@styles/pane.css" />
    </stylesheets>
+   <left>
+      <VBox prefHeight="298.0" prefWidth="183.0" styleClass="left_VBox" BorderPane.alignment="CENTER">
+         <children>
+            <Hyperlink alignment="CENTER" contentDisplay="CENTER" prefWidth="149.0" styleClass="side-bar-label" text="Hyperlink" />
+            <Hyperlink alignment="CENTER" styleClass="side-bar-label" text="Hyperlink" />
+            <Hyperlink alignment="CENTER" styleClass="side-bar-label" text="Hyperlink" />
+            <Hyperlink alignment="CENTER" styleClass="side-bar-label" text="Hyperlink" />
+            <Hyperlink alignment="CENTER" styleClass="side-bar-label" text="Hyperlink" />
+            <Hyperlink alignment="CENTER" styleClass="side-bar-label" text="Hyperlink" />
+         </children></VBox>
+   </left>
 </BorderPane>
