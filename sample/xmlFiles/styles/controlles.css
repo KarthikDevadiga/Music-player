@@ -20,6 +20,8 @@
  -fx-background-radius : 10px;
  -fx-background-color : #EABF9F;
  -fx-text-fill:#1E212D;
+
+
 }
 
 .btn:hover{
@@ -30,4 +32,11 @@
 
 .btn:pressed{
 -fx-text-fill:#1E212D;
+}
+
+.burger{
+ -fx-background-image : url('icons/menu.png');
+ -fx-background-repeat: no-repeat ;
+ -fx-background-position: center;
+ -fx-pref-width : 50px;
 }
