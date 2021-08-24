@@ -35,7 +35,7 @@
                <font>
                   <Font size="24.0" />
                </font></Label>
-            <Hyperlink alignment="CENTER" contentDisplay="CENTER" styleClass="btn, burger" GridPane.rowIndex="1">
+            <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#showSideBar" styleClass="btn, burger" GridPane.rowIndex="1">
                
                <GridPane.margin>
                   <Insets left="20.0" />
@@ -48,7 +48,7 @@
       <URL value="@styles/pane.css" />
    </stylesheets>
    <left>
-      <VBox prefHeight="298.0" prefWidth="183.0" styleClass="left_VBox" BorderPane.alignment="CENTER">
+      <VBox fx:id="vbox" prefHeight="298.0" prefWidth="183.0" styleClass="left_VBox" BorderPane.alignment="CENTER">
          <children>
             <Hyperlink alignment="CENTER" contentDisplay="CENTER" prefWidth="149.0" styleClass="side-bar-label" text="Hyperlink" />
             <Hyperlink alignment="CENTER" styleClass="side-bar-label" text="Hyperlink" />
