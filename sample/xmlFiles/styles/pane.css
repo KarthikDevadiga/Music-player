@@ -11,3 +11,7 @@
 -fx-background-color: #FFFF;
 -fx-background-radius : 10px;
 }
+
+.box:hover{
+-fx-border-radius : 10px;
+}

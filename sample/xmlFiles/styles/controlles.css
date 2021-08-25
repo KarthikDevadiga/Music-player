@@ -7,8 +7,8 @@
 -fx-font-weight : 800;
 -fx-font-style : italic;
 -fx-background-color : transparent;
-
 }
+
 
 .btn{
 -fx-underline : false;
@@ -20,8 +20,6 @@
  -fx-background-radius : 10px;
  -fx-background-color : #EABF9F;
  -fx-text-fill:#1E212D;
-
-
 }
 
 .btn:hover{
@@ -65,7 +63,7 @@
 -fx-text-fill:#EABF9F;
 }
 
-.label{
+.labal{
 -fx-underline : false;
 -fx-text-alignment : center;
 -fx-padding : 10px;
@@ -78,8 +76,14 @@
 -fx-pref-width : 200px;
 }
 
-.label:hover{
+.labal:hover{
 -fx-underline : false;
  -fx-background-color : #B68973;
  -fx-text-fill:#FFFF;
 }
+
+.text{
+-fx-background-color:transparent;
+-fx-font-weight:300;
+}
+

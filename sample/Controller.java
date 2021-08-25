@@ -25,7 +25,7 @@ public class Controller {
         vbox.setVisible(false);
         for(int i=0; i<100; i++){
             Label label = new Label(i + "lorem20");
-            label.getStyleClass().add("label");
+            label.getStyleClass().add("labal");
 
             tile.getChildren().add(label);
         }
