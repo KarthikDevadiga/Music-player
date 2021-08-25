@@ -2,6 +2,8 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
@@ -12,13 +14,23 @@ import java.util.List;
 
 
 public class Controller {
+
+
+
     @FXML
-    private VBox vbox;
+    private VBox vbox, tile;
 
     @FXML
     public void initialize(){
         vbox.setVisible(false);
+        for(int i=0; i<100; i++){
+            Label label = new Label(i + "lorem20");
+            label.getStyleClass().add("label");
+
+            tile.getChildren().add(label);
+        }
     }
+    //tile.getChildren().add(new Label(i + ": OMG").getStyleClass().add("side-bar-label"));
 
     //hand-burger
     public void showSideBar(ActionEvent e){

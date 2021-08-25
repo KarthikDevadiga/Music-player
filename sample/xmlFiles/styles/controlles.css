@@ -1,5 +1,5 @@
 *{
--fx-background-color : #FAF3E0;
+-fx-background-color : #F3F3F3;
 }
 
 .heading{
@@ -63,4 +63,23 @@
 
 .side-bar-label:pressed{
 -fx-text-fill:#EABF9F;
+}
+
+.label{
+-fx-underline : false;
+-fx-text-alignment : center;
+-fx-padding : 10px;
+-fx-margin : 10px;
+ -fx-border-style : none;
+ -fx-border-width : 0px;
+ -fx-background-radius : 10px;
+ -fx-background-color : #EABF9F;
+ -fx-text-fill:#1E212D;
+-fx-pref-width : 200px;
+}
+
+.label:hover{
+-fx-underline : false;
+ -fx-background-color : #B68973;
+ -fx-text-fill:#FFFF;
 }
