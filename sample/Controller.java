@@ -9,10 +9,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Font;
 import model.DataSource;
 import model.Songs;
 
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +25,7 @@ import java.util.List;
 
 public class Controller {
 
-
+    private Media media;
 
     @FXML
     private VBox vbox, tile;
@@ -55,6 +59,13 @@ public class Controller {
             tile.getChildren().add(label);
         }
 
+    }
+
+    public void onclickTwo(){
+        String url = "src/sample/music/ambient_hum_air_conditioner.ogg";
+        media = new Media(new File(url).toURI().toString());
+        MediaPlayer player = new MediaPlayer(media);
+        player.play();
     }
 
 

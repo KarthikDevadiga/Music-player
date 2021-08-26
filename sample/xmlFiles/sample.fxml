@@ -134,7 +134,7 @@
                      <GridPane.margin>
                         <Insets bottom="20.0" left="10.0" />
                      </GridPane.margin></Label>
-                    <Hyperlink styleClass="btn" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                    <Hyperlink onAction="#onclickTwo" styleClass="btn" text="Hyperlink" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
                      <GridPane.margin>
                         <Insets left="20.0" />
                      </GridPane.margin></Hyperlink>
