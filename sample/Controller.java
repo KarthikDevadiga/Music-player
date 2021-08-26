@@ -45,10 +45,10 @@ public class Controller {
 
     //to list all songs
 
-    public void loadsFirst(){
-//        ArrayList<Songs> list = DataSource.getInstance().query_song();
-        ObservableList<Songs> task = (ObservableList<Songs>) new GetSongs();
-        for(Songs song : task){
+    public void loadsFirst(){  // here tile is reference to VBox
+        ArrayList<Songs> list = DataSource.getInstance().query_song();
+//        ObservableList<Songs> task = (ObservableList<Songs>) new GetSongs();
+        for(Songs song : list){
             Label label = new Label(song.getTitle());
             label.getStyleClass().add("labal");
 
