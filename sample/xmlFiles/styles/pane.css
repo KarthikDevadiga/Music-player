@@ -6,3 +6,12 @@
 -fx-background-color : #1E212D;
 -fx-pref-width : 200px;
 }
+
+.box{
+-fx-background-color: #FFFF;
+-fx-background-radius : 10px;
+}
+
+.box:hover{
+-fx-border-radius : 10px;
+}

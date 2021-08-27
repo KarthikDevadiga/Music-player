@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MusicController">
+   <top>
+      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="499.0" styleClass="heading" text="Label" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <GridPane prefHeight="62.0" prefWidth="500.0" styleClass="box" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" styleClass="box" GridPane.columnIndex="1">
+               <children>
+                  <Hyperlink onAction="#play" styleClass="playBut, btn" />
+                  <Hyperlink onAction="#pause" styleClass="pauseBut, btn" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="box" GridPane.columnIndex="2">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="49.0" styleClass="lowVol" />
+                  <Slider fx:id="slider" max="100.0" prefHeight="14.0" prefWidth="103.0" value="50.0" />
+                  <Label prefHeight="30.0" prefWidth="54.0" styleClass="highVol" />
+               </children>
+            </HBox>
+            <ProgressBar fx:id="bar" prefHeight="18.0" prefWidth="500.0" progress="0.0" style="-fx-accent: #27BB9A;" styleClass=".bar" />
+         </children>
+      </GridPane>
+   </bottom>
+   <stylesheets>
+      <URL value="@styles/controlles.css" />
+      <URL value="@styles/pane.css" />
+   </stylesheets>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
