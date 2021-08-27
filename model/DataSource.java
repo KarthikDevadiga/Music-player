@@ -10,6 +10,7 @@ public class DataSource {
     public static final String TABLE_ALBUMS = "albums";
     public static final String TABLE_ARTISTS = "artists";
     public static final String TABLE_SONGS = "songs";
+    public static final String TABLE_MUSIC = "music";
 
     public static final String ARTIST_ID = "_id";
     public static final String ARTIST_NAME = "name";
@@ -34,6 +35,15 @@ public class DataSource {
     public static final int COLUMN_SONG_TITLE = 3;
     public static final int COLUMN_SONG_ALBUM = 4;
 
+    public static final String MUSIC_ID = "_id";
+    public static final String MUSIC_TRACK = "track";
+    public static final String MUSIC_TITLE = "title";
+    public static final String MUSIC_ALBUM = "album";
+    public static final int COLUMN_MUSIC_ID = 1;
+    public static final int COLUMN_MUSIC_TRACK = 2;
+    public static final int COLUMN_MUSIC_TITLE = 3;
+    public static final int COLUMN_MUSIC_ALBUM = 4;
+
     /** oder */
     public static final int ORDER_NONE = 0;
     public static final int ORDER_ASC = 1;
@@ -57,6 +67,13 @@ public class DataSource {
 
     //modified the above line
     public static final String QUERY_SONG = "SELECT " + SONG_TITLE + " FROM " + TABLE_SONGS ;
+////    public static final String QUERY_MUSIC = "SELECT url FROM " + TABLE_SONGS + " WHERE " + TABLE_MUSIC ;
+    public static final String QUERY_MUSIC = "SELECT url FROM " + TABLE_MUSIC + " WHERE "+ MUSIC_TITLE + " = ?" ;
+//    public static final String QUERY_MUSIC = "SELECT " + TABLE_MUSIC + ".url FROM "+ TABLE_MUSIC + " WHERE " + TABLE_MUSIC.COLUMN_MUSIC
+
+
+
+
 
 
 
@@ -78,6 +95,7 @@ public class DataSource {
     private PreparedStatement returnArtistId;
     private PreparedStatement returnAlbumId;
     private PreparedStatement querySong;
+    private PreparedStatement queryMusic;
 
 
     public boolean open(){
@@ -90,6 +108,7 @@ public class DataSource {
             returnArtistId = conn.prepareStatement(QUERY_ARTIST);
             returnAlbumId = conn.prepareStatement(QUERY_ALBUM);
             querySong = conn.prepareStatement(QUERY_SONG);
+            queryMusic = conn.prepareStatement(QUERY_MUSIC);
 
             return true;
         }catch (SQLException ex) {
@@ -111,6 +130,10 @@ public class DataSource {
            }
            if(querySong != null){
                querySong.close();
+           }
+
+           if(queryMusic != null){
+               queryMusic.close();
            }
            if(conn!=null){
                conn.close();
@@ -334,6 +357,31 @@ public class DataSource {
             while(result.next()){
                 Songs song = new Songs();
                 song.setTitle(result.getString(1));
+                list.add(song);
+            }
+            return list;
+        }catch(SQLException  e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+
+    public ArrayList<Music> play(String str){
+        System.out.println(str);
+        try{
+            System.out.println("1");
+            queryMusic.setString(1, str);
+            System.out.println("2");
+            ResultSet result = queryMusic.executeQuery();
+            System.out.println("3");
+            ArrayList<Music> list = new ArrayList<>();
+            System.out.println("4");
+            while(result.next()){
+                System.out.println("5");
+                Music song = new Music();
+                System.out.println(result.getString(1));
+                song.setUrl(result.getString(1));
                 list.add(song);
             }
             return list;
