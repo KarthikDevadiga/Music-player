@@ -1,5 +1,5 @@
 *{
--fx-background-color : #F3F3F3;
+-fx-background-color : #FAF3E0;
 }
 
 .heading{
@@ -37,6 +37,40 @@
  -fx-background-repeat: no-repeat ;
  -fx-background-position: center;
  -fx-pref-width : 50px;
+ -fx-text-fill : #FFFF;
+}
+
+.playBut{
+ -fx-background-image : url('icons/play2.png');
+ -fx-background-repeat: no-repeat ;
+ -fx-background-position: center;
+ -fx-pref-width : 50px;
+ -fx-text-fill : #FFFF;
+}
+
+.pauseBut{
+ -fx-background-image : url('icons/pause.png');
+ -fx-background-repeat: no-repeat ;
+ -fx-background-position: center;
+ -fx-pref-width : 50px;
+ -fx-text-fill : #FFFF;
+}
+
+.lowVol{
+ -fx-background-image : url('icons/volume-low.png');
+ -fx-background-repeat: no-repeat ;
+ -fx-background-position: center;
+ -fx-pref-width : 50px;
+ -fx-background-color:transparent;
+}
+
+.highVol{
+ -fx-background-image : url('icons/volume-high.png');
+ -fx-background-repeat: no-repeat ;
+ -fx-background-position: center;
+ -fx-pref-width : 50px;
+ -fx-background-color:transparent;
+
 }
 
 
@@ -87,3 +121,13 @@
 -fx-font-weight:300;
 }
 
+
+
+.progress-bar > .bar {
+    -fx-background-color:
+        -fx-box-border,
+        linear-gradient(to bottom, derive(-fx-accent,95%), derive(-fx-accent,10%)),
+        #EABF9F; /* this line is the background color of the bar */
+    -fx-background-insets: 0, 1, 2;
+    -fx-padding: 0.416667em; /* 5 */
+}
