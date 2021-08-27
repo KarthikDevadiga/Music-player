@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
@@ -35,6 +36,9 @@ public class Controller {
 
     @FXML
     private VBox vbox, tile;
+
+    @FXML
+    TextField field1, field2, field3;
 
     @FXML
     public void initialize(){
@@ -98,11 +102,19 @@ public class Controller {
         }
     }
 
+    public void onclickOne(){
+        //receives artist Name
+
+    }
+
     public void onclickTwo(){
-        String url = "src/sample/music/ambient_hum_air_conditioner.ogg";
-        media = new Media(new File(url).toURI().toString());
-        MediaPlayer player = new MediaPlayer(media);
-        player.play();
+        //receives artist Name && album name
+        System.out.println(field1.getText());
+    }
+
+    public void onclickThree(){
+        //receives artist Name && album name && SongName
+        System.out.println(field1.getText());
     }
 
     public void onLabelClicked(){
