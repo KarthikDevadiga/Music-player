@@ -4,7 +4,7 @@ Music-player is a desktop application
 * Here users can play, pause, fast-forward and many more using user-friendly interface
 
 # Technologies used are 
-*Java
-*SQLite
-*FXML
-*CSS
+* Java
+* SQLite
+* FXML
+* CSS
